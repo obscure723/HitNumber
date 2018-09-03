@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartGameViewController" customModule="HitNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-Bl-Vqs">
+                                <rect key="frame" x="0.0" y="239" width="375" height="189"/>
+                                <state key="normal" backgroundImage="start.png"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlD-5B-nyd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数当てゲーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJO-9p-vU6">
+                                <rect key="frame" x="0.0" y="73" width="375" height="77"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HJO-9p-vU6" secondAttribute="trailing" id="NeF-xY-mMt"/>
+                            <constraint firstItem="EvQ-Bl-Vqs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bW9-wY-nuO"/>
+                            <constraint firstItem="EvQ-Bl-Vqs" firstAttribute="top" secondItem="HJO-9p-vU6" secondAttribute="bottom" constant="89" id="cKR-Hw-V1F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EvQ-Bl-Vqs" secondAttribute="bottom" constant="239" id="dwZ-ni-qgJ"/>
+                            <constraint firstItem="HJO-9p-vU6" firstAttribute="trailing" secondItem="EvQ-Bl-Vqs" secondAttribute="trailing" id="khN-m1-JdE"/>
+                            <constraint firstItem="HJO-9p-vU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="lud-4A-uFN"/>
+                            <constraint firstItem="HJO-9p-vU6" firstAttribute="leading" secondItem="EvQ-Bl-Vqs" secondAttribute="leading" id="mLr-3z-RYs"/>
+                            <constraint firstItem="HJO-9p-vU6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="peX-77-Tzv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="gEg-Ik-Yn6" kind="show" identifier="startGame" id="N73-ND-zpw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="XWn-Ke-NsZ">
+            <objects>
+                <viewController id="gEg-Ik-Yn6" customClass="GameViewController" customModule="HitNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GXf-m8-WSb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfv-rZ-V5j">
+                                <rect key="frame" x="0.0" y="175" width="375" height="179"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数当てゲーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxh-Kp-z6h">
+                                <rect key="frame" x="0.0" y="73" width="375" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="1CN-4t-BC6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z4-MG-XYp">
+                                <rect key="frame" x="93" y="388" width="189" height="105"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="woT-CT-pp3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="チェック">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="check:" destination="gEg-Ik-Yn6" eventType="touchUpInside" id="OMJ-Li-1Zm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0z4-MG-XYp" firstAttribute="leading" secondItem="3CR-b9-B6x" secondAttribute="leading" constant="93" id="37c-NZ-SY6"/>
+                            <constraint firstItem="0z4-MG-XYp" firstAttribute="top" secondItem="rfv-rZ-V5j" secondAttribute="bottom" constant="34" id="A7z-Ee-DcW"/>
+                            <constraint firstAttribute="trailing" secondItem="Yxh-Kp-z6h" secondAttribute="trailing" id="R2v-Eq-MTg"/>
+                            <constraint firstItem="Yxh-Kp-z6h" firstAttribute="leading" secondItem="GXf-m8-WSb" secondAttribute="leading" id="YLr-fB-osy"/>
+                            <constraint firstItem="3CR-b9-B6x" firstAttribute="bottom" secondItem="0z4-MG-XYp" secondAttribute="bottom" constant="174" id="afq-dr-r4M"/>
+                            <constraint firstItem="rfv-rZ-V5j" firstAttribute="top" secondItem="Yxh-Kp-z6h" secondAttribute="bottom" constant="25" id="bLO-xO-Z4y"/>
+                            <constraint firstItem="Yxh-Kp-z6h" firstAttribute="trailing" secondItem="rfv-rZ-V5j" secondAttribute="trailing" id="m7l-k2-Ovu"/>
+                            <constraint firstItem="rfv-rZ-V5j" firstAttribute="centerX" secondItem="0z4-MG-XYp" secondAttribute="centerX" id="qOe-Tj-gdN"/>
+                            <constraint firstItem="Yxh-Kp-z6h" firstAttribute="leading" secondItem="rfv-rZ-V5j" secondAttribute="leading" id="v7q-25-R1c"/>
+                            <constraint firstItem="Yxh-Kp-z6h" firstAttribute="top" secondItem="3CR-b9-B6x" secondAttribute="top" constant="53" id="xbp-El-hxi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3CR-b9-B6x"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="rfv-rZ-V5j" id="fl5-0D-i2n"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backStartPage" id="r2T-ch-P5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgG-nv-vUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="start.png" width="800" height="354"/>
+    </resources>
+</document>
